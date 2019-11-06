@@ -20,15 +20,9 @@ const styles = (theme) => ({
 
 const Buttons = (props) => {
 
-    // const postMessage = () => {
-    //     console.log('called postmessage from child')
-    //     window.parent.postMessage('clicked on Success! Yayy!')
+    // const handleClick = (path) => {
+    //     window.parent.postMessage(path, '*')
     // }
-
-    const handleClick = () => {
-        console.log('calling your mother now!')
-        window.parent.postMessage('home','*')
-    }
 
     const {
         classes
@@ -50,9 +44,8 @@ const Buttons = (props) => {
                         className={classes.button}
                     >
                         <a
-                            href="http://localhost:3000/home"
+                            href="http://localhost:3000/success?caseID=123&sessionID=123"
                             className={classes.link}
-                            onClick={handleClick}
                         >
                             Success
                         </a>
@@ -65,7 +58,7 @@ const Buttons = (props) => {
                     >
                         <a
                             className={classes.link}
-                            href="http://localhost:3000/services"
+                            href="http://localhost:3000/error"
                         >
                             Error
                         </a>
@@ -77,7 +70,7 @@ const Buttons = (props) => {
                         className={classes.button}
                     >
                         <a
-                            href="http://localhost:3000/utilities"
+                            href="http://localhost:3000/saveforlater"
                             className={classes.link}
                         >
                             Save for later
